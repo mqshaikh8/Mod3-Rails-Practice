@@ -13,7 +13,7 @@ class TasksController < ApplicationController
   end
 
   def update
-    @task = Task.find(id: params[:id])
+    @task = Task.find(params[:id])
     @task.update(task_params)
     render json: @task
   end
