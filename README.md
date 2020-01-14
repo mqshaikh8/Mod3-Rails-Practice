@@ -135,9 +135,9 @@ The form to add a task should be rendered in the `#task-form-container` should h
 
 ```HTML
 <form id="new-task-form">
-  <label>Task Name:</label>
-  <input type="text" id="task-name">
-  <input type="submit">
+  <label for="task-name">Task Name:</label>
+  <input type="text" id="task-name" >
+  <input type="submit" value="Create new Task">
 </form>
 ```
 
@@ -149,7 +149,7 @@ The form to add a task should be rendered in the `#task-form-container` should h
   Required Headers:
     {
       'Content-Type': 'application/json',
-      'Accepts': 'application/json'
+      'Accept': 'application/json'
     }
 
   Required Body:
@@ -174,20 +174,21 @@ The form to add a task should be rendered in the `#task-form-container` should h
   Required Headers:
     {
       'Content-Type': 'application/json',
-      'Accepts': 'application/json'
+      'Accept': 'application/json'
     }
 
   Required Body:
     {
       name: "Name of the Task",
       done: false,
-      list_id: ${ID of the list currently on the page}
+      list_id: ID of the list currently on the page
     }
 
 #=> Example Response
   {
     id: 100,
-    content: "Content of the Review"
+    content: "Content of the Review",
+    done: false
   }
 ```
 
