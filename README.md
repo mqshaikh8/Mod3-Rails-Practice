@@ -9,7 +9,7 @@
 
 # API
 ```
-$ cd Lists               # Change into the directory
+$ cd ListAPI               # Change into the directory
 $ bundle install           # Install the appropriate dependencies/gems
 $ rails db:migrate         # Migrate the database
 $ rails db:seed            # Seeds the database
